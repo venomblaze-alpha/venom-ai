@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 139, 133, 0.7);
+  border-radius: 4px;
+}
+#pic {
+  filter: drop-shadow(2px 6px 12px rgba(100, 51, 30, 0.4));
+}
+#pic:hover {
+  filter: drop-shadow(2px 6px 12px rgba(132, 70, 43, 0.65));
+}
+::selection {
+  background: #d03e09;
+  color: white;
+}
+
+/* Headings */
+.markdown-body h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+.markdown-body h2 {
+  font-size: 2rem; /* 32px */
+}
+
+.markdown-body h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+.markdown-body h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+.markdown-body h5 {
+  font-size: 1.25rem; /* 20px */
+}
+
+.markdown-body h6 {
+  font-size: 1rem; /* 16px */
+}
+
+/* Headings */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.15;
+  color: #fff0e8;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.markdown-body p {
+  margin-bottom: 10px;
+}
+
+/* Links */
+.markdown-body a {
+  @apply text-orange-500;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 20px;
+}
+.markdown-body ul li {
+  list-style-type: disc;
+}
+
+.markdown-body blockquote {
+  border-left: 4px solid #957b5d;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 15px;
+  color: #a3743d;
+}
+
+.markdown-body pre {
+  background-color: #464646dc;
+  border-left: 3px solid #e3843b;
+  color: white;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.markdown-body code {
+  padding: 2px 4px;
+  font-size: 90%;
+  border-radius: 3px;
+}
+
+/* Tables */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid hsl(0, 0%, 32%);
+  padding: 8px;
+  text-align: left;
+}
+
+.markdown-body th {
+  background-color: #626161;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes bg-pan {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-bg-pan {
+  animation: bg-pan 2.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
