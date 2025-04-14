@@ -84,7 +84,7 @@ pnpm dev
 ## 🧩 Project Structure
 
 ```
-next-groq/
+venom-ai/
 ├── assets/           # Static assets like icons
 ├── components/       # React components
 │   └── Chatbox.tsx   # Main chat interface
