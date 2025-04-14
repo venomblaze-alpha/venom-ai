@@ -2,7 +2,7 @@
 
 A lightning-fast ⚡ chat interface powered by Groq's API and built with Next.js
 
-![Venom AI](app/opengraph-image.png)
+![Venom AI](public/opengraph-image.png)
 
 ## ✨ Features
 
