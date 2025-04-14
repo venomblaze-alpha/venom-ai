@@ -1,8 +1,8 @@
-# 🚀 Next.js + Groq AI Chat Application
+# Venom AI Chat Application
 
 A lightning-fast ⚡ chat interface powered by Groq's API and built with Next.js
 
-![Next Groq](app/opengraph-image.png)
+![Venom AI](app/opengraph-image.png)
 
 ## ✨ Features
 
